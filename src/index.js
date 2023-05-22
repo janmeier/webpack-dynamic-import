@@ -1,7 +1,7 @@
-import { answer } from './answer';
-function render() {
-  document.getElementById(
-    'root'
-  ).innerHTML = `The answer to the universe is ${answer}.`;
+async function loadCountries(language) {
+  
+  await import(
+    /* webpackChunkName: "iso-countries" */
+    `i18n-iso-countries/langs/${language}.json`
+  )
 }
-render();
